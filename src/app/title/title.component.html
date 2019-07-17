@@ -1,0 +1,12 @@
+<header>
+
+    <button class="float-right btn btn-outline-success" *ngIf="!isConnected" (click)="login()">Login
+    </button>
+    <button class="float-right btn btn-outline-warning" *ngIf="isConnected" (click)="logout()">Logout
+    </button>
+
+    <h1 *ngIf="showTitle">{{title | uppercase}}</h1>
+    <div class="alert alert-info">
+        Bienvenue sur notre application de tâches et d'idées
+    </div>
+</header>

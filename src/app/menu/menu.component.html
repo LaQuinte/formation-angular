@@ -1,0 +1,18 @@
+<!-- composant Menu -->
+<nav>
+    <div class="btn-group" ngbDropdown>
+        <button class="btn btn-outline-primary">{{menuItems.tasks}}</button>
+        <button class="btn btn-outline-primary">{{menuItems.ideas}}</button>
+        <button class="btn btn-outline-primary" ngbDropdownToggle>
+            {{menuItems.myAccount}}
+        </button>
+        <div class="dropdown-menu" ngbDropdownMenu>
+            <h6 class="dropdown-header">{{userName}}</h6>
+            <button class="dropdown-item">{{menuItems.myTasks}}</button>
+            <button class="dropdown-item">{{menuItems.myIdeas}}</button>
+        </div>
+        <form class="form-inline">
+            <input class="form-control" [(ngModel)]="userName.name" name="userName">
+        </form>
+    </div>
+</nav>
